@@ -13,6 +13,7 @@ import ActivityDetailsScreen from '@screens/ActivityDetailsScreen';
 import ProfileScreen from '@screens/ProfileScreen';
 import PartnershipScreen from '@screens/PartnershipScreen';
 import BookingScreen from '@screens/BookingScreen';
+import BookingDetailsScreen from '@screens/BookingDetailsScreen';
 import MapScreen from '@screens/MapScreen';
 import FavoritesScreen from '@screens/FavoritesScreen';
 import ReviewsScreen from '@screens/ReviewsScreen';
