@@ -443,3 +443,106 @@ export const getFeaturedVenues = (): Venue[] => {
 export const getPopularActivities = (): Activity[] => {
   return mockActivities.slice(0, 6); // Return first 6 as "popular"
 };
+
+// Mock bookings data
+export const mockBookings = [
+  {
+    id: 'booking-1',
+    venueId: '1',
+    activityId: '1',
+    userId: 'user-1',
+    childrenIds: ['child-1'],
+    date: '2024-02-15',
+    time: '10:00',
+    participants: 2,
+    totalPrice: 30,
+    status: 'confirmed' as const,
+    notes: 'First time visit, child is excited about the playground!',
+    createdAt: '2024-02-01T09:00:00Z',
+  },
+  {
+    id: 'booking-2',
+    venueId: '2',
+    activityId: '2',
+    userId: 'user-1',
+    childrenIds: ['child-1'],
+    date: '2024-02-20',
+    time: '14:30',
+    participants: 1,
+    totalPrice: 25,
+    status: 'pending' as const,
+    notes: 'Please have art smocks ready.',
+    createdAt: '2024-02-05T11:30:00Z',
+  },
+  {
+    id: 'booking-3',
+    venueId: '3',
+    activityId: '3',
+    userId: 'user-1',
+    childrenIds: ['child-2'],
+    date: '2024-02-10',
+    time: '16:00',
+    participants: 1,
+    totalPrice: 30,
+    status: 'completed' as const,
+    notes: 'Great session! Child loved it.',
+    createdAt: '2024-01-25T14:20:00Z',
+  },
+  {
+    id: 'booking-4',
+    venueId: '4',
+    activityId: '4',
+    userId: 'user-1',
+    childrenIds: ['child-1'],
+    date: '2024-02-25',
+    time: '15:30',
+    participants: 1,
+    totalPrice: 50,
+    status: 'confirmed' as const,
+    createdAt: '2024-02-08T10:15:00Z',
+  },
+  {
+    id: 'booking-5',
+    venueId: '5',
+    activityId: '5',
+    userId: 'user-1',
+    childrenIds: ['child-2'],
+    date: '2024-01-30',
+    time: '13:00',
+    participants: 1,
+    totalPrice: 45,
+    status: 'cancelled' as const,
+    notes: 'Child was sick, had to cancel.',
+    createdAt: '2024-01-20T16:45:00Z',
+  },
+];
+
+// Mock children data
+export const mockChildren = [
+  {
+    id: 'child-1',
+    name: 'Emma',
+    birthDate: '2018-03-15',
+    interests: ['arts-crafts', 'music'],
+    allergies: ['peanuts'],
+  },
+  {
+    id: 'child-2',
+    name: 'Liam',
+    birthDate: '2016-07-22',
+    interests: ['sports', 'technology'],
+    specialNeeds: ['ADHD - needs frequent breaks'],
+  },
+];
+
+export const getBookingById = (id: string) => {
+  return mockBookings.find(booking => booking.id === id);
+};
+
+export const getUserBookings = (userId: string) => {
+  return mockBookings.filter(booking => booking.userId === userId);
+};
+
+export const getChildById = (id: string) => {
+  return mockChildren.find(child => child.id === id);
+};

@@ -13,6 +13,8 @@ import ActivityDetailsScreen from '@screens/ActivityDetailsScreen';
 import ProfileScreen from '@screens/ProfileScreen';
 import PartnershipScreen from '@screens/PartnershipScreen';
 import BookingScreen from '@screens/BookingScreen';
+import BookingDetailsScreen from '@screens/BookingDetailsScreen';
+import MyBookingsScreen from '@screens/MyBookingsScreen';
 import MapScreen from '@screens/MapScreen';
 import FavoritesScreen from '@screens/FavoritesScreen';
 import ReviewsScreen from '@screens/ReviewsScreen';
@@ -192,6 +194,20 @@ const AppNavigator: React.FC = () => {
         component={FavoritesScreen}
         options={{
           title: 'My Favorites',
+        }}
+      />
+      <Stack.Screen
+        name="BookingDetails"
+        component={BookingDetailsScreen}
+        options={{
+          title: 'Booking Details',
+        }}
+      />
+      <Stack.Screen
+        name="MyBookings"
+        component={MyBookingsScreen}
+        options={{
+          title: 'My Bookings',
         }}
       />
     </Stack.Navigator>

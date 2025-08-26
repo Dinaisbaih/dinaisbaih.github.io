@@ -16,7 +16,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import LinearGradient from 'react-native-linear-gradient';
 import { theme } from '@/theme';
 import { RootStackParamList, Venue, Activity, ActivityCategory } from '@types/index';
-import { mockVenues, mockActivities } from '@services/mockData';
+import { mockVenues, mockActivities, getUserBookings } from '@services/mockData';
 import VenueCard from '@components/VenueCard';
 import ActivityCard from '@components/ActivityCard';
 import SearchBar from '@components/SearchBar';
@@ -149,6 +149,19 @@ const HomeScreen: React.FC = () => {
         {/* Quick Actions */}
         <View style={styles.section}>
           <View style={styles.quickActions}>
+            <TouchableOpacity 
+              style={styles.quickAction}
+              onPress={() => navigation.navigate('MyBookings')}
+            >
+              <LinearGradient
+                colors={theme.colors.gradient.primary}
+                style={styles.quickActionGradient}
+              >
+                <Icon name="calendar-check" size={24} color={theme.colors.background} />
+                <Text style={styles.quickActionText}>My Bookings</Text>
+              </LinearGradient>
+            </TouchableOpacity>
+
             <TouchableOpacity 
               style={styles.quickAction}
               onPress={() => navigation.navigate('Map')}
