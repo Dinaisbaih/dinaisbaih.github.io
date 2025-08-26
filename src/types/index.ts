@@ -248,6 +248,8 @@ export type RootStackParamList = {
   Search: { filters?: Partial<SearchFilters> };
   Profile: undefined;
   Booking: { activityId: string };
+  BookingDetails: { bookingId: string };
+  MyBookings: undefined;
   Partnership: undefined;
   Map: { venues?: Venue[] };
   Reviews: { venueId: string };
